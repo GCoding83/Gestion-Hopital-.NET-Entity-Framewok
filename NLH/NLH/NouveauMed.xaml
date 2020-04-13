@@ -1,0 +1,24 @@
+﻿<Window x:Class="NLH.NouveauMed"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NLH"
+        mc:Ignorable="d"
+        Title="NouveauMed" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Rectangle Fill="#FF2424F1" HorizontalAlignment="Left" Height="83" Stroke="Black" VerticalAlignment="Top" Width="794" RenderTransformOrigin="-1.18,0.486" Margin="0,0,-0.4,0"/>
+        <Label Content="Ajouter Médecin" FontSize="38" Foreground="White" HorizontalAlignment="Left" Margin="256,10,0,0" VerticalAlignment="Top" Width="370" Height="90"/>
+        <TextBox x:Name="txtPrenom" HorizontalAlignment="Left" Height="23" Margin="219,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
+        <TextBox x:Name="txtNom" HorizontalAlignment="Left" Height="23" Margin="219,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153" />
+        <TextBox x:Name="txtSpecialite" HorizontalAlignment="Left" Height="23" Margin="219,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="153"/>
+        <ComboBox x:Name="cbDepartement" HorizontalAlignment="Left" Margin="219,328,0,0" VerticalAlignment="Top" Width="153" IsSynchronizedWithCurrentItem="True" DisplayMemberPath="nomDepartement"/>
+        <Label Content="Prénom" HorizontalAlignment="Left" Margin="123,163,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Nom" HorizontalAlignment="Left" Margin="123,218,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Spécialité" HorizontalAlignment="Left" Margin="123,266,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Département" HorizontalAlignment="Left" Margin="123,325,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button x:Name="btnAjouterMed" Content="Ajouter" HorizontalAlignment="Left" Background="#FF41FF00" Margin="461,241,0,0" VerticalAlignment="Top" Width="83" Height="33" FontWeight="Bold" Click="btnAjouterMed_Click"/>
+        <Button Content="Retour" HorizontalAlignment="Left" Margin="575,241,0,0" VerticalAlignment="Top" Width="83" Height="33" Background="#FFECF175" FontWeight="Bold" Click="Button_Click"/>
+
+    </Grid>
+</Window>

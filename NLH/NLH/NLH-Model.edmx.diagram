@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="40168472f4ed4a54b2dcf741f5016f29" Name="Diagram1" ZoomLevel="83">
+        <EntityTypeShape EntityType="NorthernLightsHospitalModel.Compagnie_Assurance" Width="1.5" PointX="3.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthernLightsHospitalModel.Departement" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthernLightsHospitalModel.Dossier_Admission" Width="1.5" PointX="11.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthernLightsHospitalModel.Lit" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthernLightsHospitalModel.Medecin" Width="1.5" PointX="9" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthernLightsHospitalModel.Parent" Width="1.5" PointX="8.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthernLightsHospitalModel.Patient" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthernLightsHospitalModel.Type_Lit" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <AssociationConnector Association="NorthernLightsHospitalModel.FK_PATIENT_COMPAGNIE_ASSURANCE" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthernLightsHospitalModel.FK_LIT_DEPARTEMENT" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthernLightsHospitalModel.FK_Medecin_Departement" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthernLightsHospitalModel.FK_DOSSIER_ADMISSION_LIT" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthernLightsHospitalModel.FK_DOSSIER_ADMISSION_MEDECIN" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthernLightsHospitalModel.FK_DOSSIER_ADMISSION_PATIENT" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthernLightsHospitalModel.FK_LIT_TYPE_LIT" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthernLightsHospitalModel.FK_Parent_Patient" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthernLightsHospitalModel.FK_Patient_Type_Lit_Prefere" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

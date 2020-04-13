@@ -1,0 +1,182 @@
+﻿<Window x:Class="NLH.PrepWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NLH"
+        mc:Ignorable="d"
+        Title="Fenêtre Préposés" Height="713.1" Width="868.4" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="94*"/>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="59*"/>
+            <ColumnDefinition Width="580*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl HorizontalAlignment="Left" Height="683" VerticalAlignment="Top" Width="862" Grid.ColumnSpan="6">
+            <TabItem Header="Patient">
+                <Grid Background="#FFE5E5E5" Margin="0,0,-77.6,-211.4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="51*"/>
+                        <ColumnDefinition Width="28"/>
+                        <ColumnDefinition Width="607*"/>
+                        <ColumnDefinition Width="248*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="NAS Patient" HorizontalAlignment="Left" Margin="44,86,0,0" VerticalAlignment="Top" Height="28" Grid.ColumnSpan="3" Width="86"/>
+                    <Button x:Name="btnRechercherPatient" Content="Rechercher" HorizontalAlignment="Left" Margin="9.8,159,0,0" VerticalAlignment="Top" Width="75" Height="21" Background="#FF41FF00" Grid.Column="2" Click="btnRechercherPatient_Click"/>
+                    <TextBox x:Name="txtRechercherNAS" HorizontalAlignment="Left" Height="26" Margin="44,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="3" TabIndex="1"/>
+                    <TextBox x:Name="txtNASPatient" HorizontalAlignment="Left" Height="26" Margin="160.8,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2" TabIndex="2"/>
+                    <TextBox x:Name="txtNomPatientAjouter" HorizontalAlignment="Left" Height="26" Margin="528.8,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2" Grid.ColumnSpan="2" TabIndex="4"/>
+                    <TextBox x:Name="txtPrenomPatientAjouter" HorizontalAlignment="Left" Height="26" Margin="342.8,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2" TabIndex="3"/>
+                    <TextBox x:Name="txtVilleAjouter" HorizontalAlignment="Left" Height="26" Margin="342.8,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2" TabIndex="6"/>
+                    <TextBox x:Name="txtTelephoneAjouter" HorizontalAlignment="Left" Height="25" Margin="342.8,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2" TabIndex="9"/>
+                    <TextBox x:Name="txtCPAjouter" HorizontalAlignment="Left" Height="25" Margin="160.8,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2" TabIndex="8"/>
+                    <TextBox x:Name="txtAdressePatient" HorizontalAlignment="Left" Height="56" Margin="160.8,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2" TabIndex="5"/>
+                    <DatePicker Name="dtNaissanceAjouter" HorizontalAlignment="Left" Margin="528.8,293,0,0" VerticalAlignment="Top" Height="25" Grid.Column="2" Grid.ColumnSpan="2" TabIndex="10"/>
+                    <ComboBox x:Name="cbProvinceAjouter" HorizontalAlignment="Left" Margin="528.8,193,0,0" VerticalAlignment="Top" Width="120" Height="25" Grid.Column="2" Grid.ColumnSpan="2" TabIndex="7">
+                        <ComboBoxItem x:Name="cbiAlberta" Content="Alberta"/>
+                        <ComboBoxItem x:Name="cbiCB" Content="Colombie-Britannique"/>
+                        <ComboBoxItem x:Name="cbiIPE" Content="Île-du-Prince-Edouard"/>
+                        <ComboBoxItem x:Name="cbiManitoba" Content="Manitoba"/>
+                        <ComboBoxItem x:Name="cbiNB" Content="Nouveau-Brunswick"/>
+                        <ComboBoxItem x:Name="cbiNE" Content="Nouvelle-Écosse"/>
+                        <ComboBoxItem x:Name="cbiOntario" Content="Ontario"/>
+                        <ComboBoxItem x:Name="cbiQuebec" Content="Québec"/>
+                        <ComboBoxItem x:Name="cbiSask" Content="Saskatchewan"/>
+                        <ComboBoxItem x:Name="cbiTNL" Content="Terre-Neuve-et-Labrador"/>
+                        <ComboBoxItem x:Name="cbiTNO" Content="Territoires du Nord-Ouest"/>
+                        <ComboBoxItem x:Name="cbiNunavut" Content="Nunavut"/>
+                        <ComboBoxItem x:Name="cbiYukon" Content="Yukon"/>
+                    </ComboBox>
+                    <Label Content="NAS" HorizontalAlignment="Left" Margin="160.8,86,0,0" VerticalAlignment="Top" Height="28" Grid.Column="2"/>
+                    <Label Content="Adresse" HorizontalAlignment="Left" Margin="160.8,158,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.716,2.555" Height="28" Grid.Column="2"/>
+                    <Label Content="Code Postal" HorizontalAlignment="Left" Margin="160.8,265,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.716,2.555" Height="27" Grid.Column="2"/>
+                    <Label Content="Prénom" HorizontalAlignment="Left" Margin="342.8,86,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.716,2.555" Height="28" Grid.Column="2"/>
+                    <Label Content="Ville" HorizontalAlignment="Left" Margin="342.8,159,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.716,2.555" Height="28" Grid.Column="2"/>
+                    <Label Content="Téléphone" HorizontalAlignment="Left" Margin="342.8,265,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.716,2.555" Height="27" Grid.Column="2"/>
+                    <Label Content="Nom" HorizontalAlignment="Left" Margin="528.8,86,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.716,2.555" Height="28" Grid.Column="2"/>
+                    <Label Content="Province" HorizontalAlignment="Left" Margin="528.8,157,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.716,2.555" Height="28" Grid.Column="2"/>
+                    <Label Content="Date Naissance" HorizontalAlignment="Left" Margin="528.8,266,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.716,2.555" Height="27" Grid.Column="2"/>
+                    <Button x:Name="btnAjouterPatientPrep" Content="Enregistrer" HorizontalAlignment="Left" Margin="180.8,593,0,0" VerticalAlignment="Top" Width="79" Height="37" RenderTransformOrigin="0.551,1.438" Background="#FF41FF00" Grid.Column="2" Click="btnAjouterPatientPrep_Click_" TabIndex="17"/>
+                    <Button x:Name="btnViderChampsPatient" Content="Vider" HorizontalAlignment="Left" Margin="328.8,593,0,0" VerticalAlignment="Top" Width="75" Height="37" Background="#FFE0E743" Grid.Column="2" Click="btnViderChampsPatient_Click" TabIndex="18"/>
+                    <Button x:Name="btnQuitterPatient" Content="Quitter" HorizontalAlignment="Left" Margin="469.8,593,0,0" VerticalAlignment="Top" Width="75" Height="37" Background="#FFDD471E" Grid.Column="2" Click="btnQuitterPrep_Click_1" TabIndex="19" />
+                    <ComboBox x:Name="cbAssuranceNomComplet" HorizontalAlignment="Left" Margin="342.8,406,0,0" VerticalAlignment="Top" Width="151" Height="25" Grid.Column="2"  DisplayMemberPath="nomCompagnie" IsSynchronizedWithCurrentItem="True" TabIndex="13"/>
+                    <RadioButton GroupName="assuranceBool" x:Name="ouiAssurance"  Content="Oui" HorizontalAlignment="Left" Margin="160.8,391,0,0" VerticalAlignment="Top" Grid.Column="2" Checked="ouiAssurance_Checked" TabIndex="11"/>
+                    <RadioButton GroupName="assuranceBool" x:Name="nonAssurance"  Content="Non" HorizontalAlignment="Left" Margin="160.8,417,0,0" VerticalAlignment="Top" Grid.Column="2" IsChecked="True" Checked="nonAssurance_Checked" TabIndex="12"/>
+                    <Label Content="Compagnies d'Assurance" HorizontalAlignment="Left" Margin="342.8,379,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.716,2.555" Height="27" Grid.Column="2"/>
+                    <ComboBox x:Name="cbTypePrefere" HorizontalAlignment="Left" Margin="342.8,515,0,0" VerticalAlignment="Top" Width="151" Height="25" Grid.Column="2" ItemsSource="{Binding}" DisplayMemberPath="descTypeLit" IsSynchronizedWithCurrentItem="True" TabIndex="16"/>
+                    <RadioButton GroupName="typeLitBool" x:Name="ouiLitPref" Content="Oui" HorizontalAlignment="Left" Margin="160.8,499,0,0" VerticalAlignment="Top" Grid.Column="2" Checked="ouiPrefere_Checked" TabIndex="14"/>
+                    <RadioButton GroupName="typeLitBool" x:Name="nonLitPref" Content="Non" HorizontalAlignment="Left" Margin="160.8,525,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.586,5.487" Grid.Column="2" IsChecked="True" Checked="nonPrefere_Checked" TabIndex="15"/>
+                    <Label Content="Type de Lit" HorizontalAlignment="Left" Margin="342.8,493,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.716,2.555" Height="27" Grid.Column="2"/>
+                    <Rectangle Fill="#FF2424F1" HorizontalAlignment="Left" Height="65" Stroke="Black" VerticalAlignment="Top" Width="861" Grid.ColumnSpan="4" Margin="0,1,0,0"/>
+                    <Label Content="Ajouter ou Rechercher un Patient" HorizontalAlignment="Left" Margin="180.8,10,0,0" VerticalAlignment="Top" FontSize="24" Foreground="White" Grid.Column="2"/>
+                    <GroupBox Grid.ColumnSpan="3" Header="Rechercher Patient" HorizontalAlignment="Left" Height="126" Margin="10,72,0,0" VerticalAlignment="Top" Width="173" FontWeight="Bold"/>
+                    <GroupBox Grid.Column="2" Header="Assurance" HorizontalAlignment="Left" Height="90" Margin="131.8,359,0,0" VerticalAlignment="Top" Width="564" Grid.ColumnSpan="2" FontWeight="Bold"/>
+                    <GroupBox Grid.Column="2" Header="Type de Lit Préféré" HorizontalAlignment="Left" Height="83" Margin="131.8,475,0,0" VerticalAlignment="Top" Width="564" Grid.ColumnSpan="2" FontWeight="Bold"/>
+                    <GroupBox Grid.Column="2" Header="Identité Patient" HorizontalAlignment="Left" Height="261" Margin="131.8,71,0,0" VerticalAlignment="Top" Width="564" Grid.ColumnSpan="2" FontWeight="Bold" RenderTransformOrigin="0.5,0.5"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Parent">
+                <Grid Background="#FFE5E5E5">
+                    <Rectangle Fill="#FF2424F1" HorizontalAlignment="Left" Height="65" Stroke="Black" VerticalAlignment="Top" Width="861" Margin="0,0,-4.2,0"/>
+                    <Label Content="Ajouter un Parent" HorizontalAlignment="Left" Margin="342,10,0,0" VerticalAlignment="Top" FontSize="24" Foreground="White"/>
+                    <Button x:Name="btnEnregistrerParent" Content="Enregistrer" HorizontalAlignment="Left" Margin="260,593,0,0" VerticalAlignment="Top" Width="79" Height="37" RenderTransformOrigin="0.551,1.438" Background="#FF41FF00" Click="btnEnregistrerParent_Click"/>
+                    <Button x:Name="btnViderParent" Content="Vider" HorizontalAlignment="Left" Margin="407,593,0,0" VerticalAlignment="Top" Width="75" Height="37" Background="#FFE0E743" Click="btnViderParent_Click"/>
+                    <Button x:Name="btnQuitterParent" Content="Quitter" HorizontalAlignment="Left" Margin="549,593,0,0" VerticalAlignment="Top" Width="75" Height="37" Background="#FFDD471E" Click="btnQuitterPrep_Click_1"/>
+                    <Label Content="Prénom" HorizontalAlignment="Left" Margin="301,111,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Nom" HorizontalAlignment="Left" Margin="301,162,0,0" VerticalAlignment="Top" Height="50"/>
+                    <Label Content="Adresse" HorizontalAlignment="Left" Margin="301,212,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.604,0.168"/>
+                    <Label Content="Ville" HorizontalAlignment="Left" Margin="301,298,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.2,-1.125"/>
+                    <Label Content="Code Postal" HorizontalAlignment="Left" Margin="301,362,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Province" HorizontalAlignment="Left" Margin="301,418,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtPrenomParent" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="180" Margin="407,111,0,0"/>
+                    <TextBox x:Name="txtNomParent" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="180" Margin="407,162,0,0"/>
+                    <TextBox x:Name="txtAdresseParent" HorizontalAlignment="Left" Height="49" TextWrapping="Wrap"  VerticalAlignment="Top" Width="180" Margin="407,214,0,0"/>
+                    <TextBox x:Name="txtVilleParent" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="180" Margin="407,298,0,0"/>
+                    <TextBox x:Name="txtCPParent" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="180" Margin="407,362,0,0"/>
+                    <ComboBox Name="cbProvinceParent" HorizontalAlignment="Left" Margin="407,418,0,0" VerticalAlignment="Top" Width="180">
+                        <ComboBoxItem x:Name="cbiAlberta2" Content="Alberta"/>
+                        <ComboBoxItem x:Name="cbiCB2" Content="Colombie-Britannique"/>
+                        <ComboBoxItem x:Name="cbiIPE2" Content="Île-du-Prince-Edouard"/>
+                        <ComboBoxItem x:Name="cbiManitoba2" Content="Manitoba"/>
+                        <ComboBoxItem x:Name="cbiNB2" Content="Nouveau-Brunswick"/>
+                        <ComboBoxItem x:Name="cbiNE2" Content="Nouvelle-Écosse"/>
+                        <ComboBoxItem x:Name="cbiOntario2" Content="Ontario"/>
+                        <ComboBoxItem x:Name="cbiQuebec2" Content="Québec"/>
+                        <ComboBoxItem x:Name="cbiSask2" Content="Saskatchewan"/>
+                        <ComboBoxItem x:Name="cbiTNL2" Content="Terre-Neuve-et-Labrador"/>
+                        <ComboBoxItem x:Name="cbiTNO2" Content="Territoires du Nord-Ouest"/>
+                        <ComboBoxItem x:Name="cbiNunavut2" Content="Nunavut"/>
+                        <ComboBoxItem x:Name="cbiYukon2" Content="Yukon"/>
+                    </ComboBox>
+                    <TextBox x:Name="txtTelephoneParent" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="180" Margin="407,482,0,0" RenderTransformOrigin="0.521,2.252"/>
+                    <Label Content="Téléphone" HorizontalAlignment="Left" Margin="301,479,0,0" VerticalAlignment="Top"/>
+                    <GroupBox Header="Identité Parent" HorizontalAlignment="Left" Height="456" Margin="241,88,0,0" VerticalAlignment="Top" Width="402" FontWeight="Bold"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem  Header="Dossier" RenderTransformOrigin="0.5,0.509">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="71*"/>
+                        <ColumnDefinition Width="34*"/>
+                        <ColumnDefinition Width="157*"/>
+                        <ColumnDefinition Width="595*"/>
+                    </Grid.ColumnDefinitions>
+                    <Rectangle Fill="#FF2424F1" HorizontalAlignment="Left" Height="65" Stroke="Black" VerticalAlignment="Top" Width="861" Margin="0,0,-4.2,0" Grid.ColumnSpan="4"/>
+                    <Label Content="Enregistrer un Dossier" HorizontalAlignment="Left" Margin="48.4,10,0,0" VerticalAlignment="Top" FontSize="24" Foreground="White" Grid.Column="3"/>
+                    <Button x:Name="btnEnregistrerDossier" Content="Enregistrer" HorizontalAlignment="Left" Margin="155.2,593,0,0" VerticalAlignment="Top" Width="79" Height="37" RenderTransformOrigin="0.551,1.438" Background="#FF41FF00" Grid.Column="2" Click="btnEnregistrerDossier_Click_1" Grid.ColumnSpan="2"/>
+                    <Button x:Name="btnViderChampsDossier" Content="Vider" HorizontalAlignment="Left" Margin="145.4,593,0,0" VerticalAlignment="Top" Width="75" Height="37" Background="#FFE0E743" Grid.Column="3" Click="btnViderChampsDossier_Click_1"/>
+                    <Button x:Name="btnQuitterDossier" Content="Quitter" HorizontalAlignment="Left" Margin="287.4,593,0,0" VerticalAlignment="Top" Width="75" Height="37" Background="#FFDD471E" Grid.Column="3" Click="btnQuitterPrep_Click_1" />
+                    <RadioButton  GroupName="chirurgieBool" x:Name="ouiChirurgie"  Content="Oui" HorizontalAlignment="Left" Margin="155.2,224,0,0" VerticalAlignment="Top" Grid.Column="2" Checked="ouiChirurgie_Checked_1" Grid.ColumnSpan="2"/>
+                    <RadioButton  GroupName="chirurgieBool" x:Name="nonChirurgie"  Content="Non" HorizontalAlignment="Left" Margin="48.4,224,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.308,0.645" Grid.Column="3" Checked="nonChirurgie_Checked_1"/>
+                    <DatePicker Name="dtChirurgie" HorizontalAlignment="Left" Margin="209.4,224,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.548,-0.453" Grid.Column="3" Width="153"/>
+                    <Label Content="Date Chirurgie" HorizontalAlignment="Left" Margin="213.4,198,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.655,-0.109" Grid.Column="3"/>
+                    <ComboBox x:Name="cbTypeLitPrep" HorizontalAlignment="Left" Margin="155.2,301,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.529,-0.147" Grid.Column="2" ItemsSource="{Binding}" DisplayMemberPath="descTypeLit" IsSynchronizedWithCurrentItem="True" SelectionChanged="cbTypeLitPrep_SelectionChanged" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="cbDepartementPrep" HorizontalAlignment="Left" Margin="154.2,352,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.513,0.049" Grid.Column="2" ItemsSource="{Binding}" DisplayMemberPath="nomDepartement" IsSynchronizedWithCurrentItem="True" SelectionChanged="cbDepartementPrep_SelectionChanged" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="cbLitsDispos" HorizontalAlignment="Left" Margin="213.4,339,0,0" VerticalAlignment="Top" Width="86" Height="25" Grid.Column="3" ItemsSource="{Binding}" DisplayMemberPath="noLit" IsSynchronizedWithCurrentItem="True"/>
+                    <Label Content="Type de Lit" HorizontalAlignment="Left" Margin="154.2,275,0,0" VerticalAlignment="Top" Grid.Column="2" Grid.ColumnSpan="2"/>
+                    <Label Content="Département" HorizontalAlignment="Left" Margin="154.2,328,0,0" VerticalAlignment="Top" Grid.Column="2" Grid.ColumnSpan="2"/>
+                    <Label Content="Lits Disponibles" HorizontalAlignment="Left" Margin="209.4,313,0,0" VerticalAlignment="Top" Grid.Column="3"/>
+                    <Label Content="Médecin" HorizontalAlignment="Left" Margin="155.2,416,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.488,5.125" Grid.Column="2" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="cbMedecinNomCompletPrep" HorizontalAlignment="Left" Margin="155.2,447,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True" SelectionChanged="cbMedecinNomCompletPrep_SelectionChanged" Grid.ColumnSpan="2">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <TextBlock.Text>
+                                        <MultiBinding StringFormat="{}{0} {1}">
+                                            <Binding Path="prenomMedecin"/>
+                                            <Binding Path="nomMedecin"/>
+                                        </MultiBinding>
+                                    </TextBlock.Text>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+
+                    <TextBox x:Name="txtSpecialitePrep" HorizontalAlignment="Left" Height="23" Margin="209.4,447,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="3"/>
+                    <Label Content="Spécialité" HorizontalAlignment="Left" Margin="209.4,416,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.488,5.125" Grid.Column="3"/>
+                    <Label Content="Date Admission" HorizontalAlignment="Left" Margin="154.2,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.655,-0.109" Grid.Column="2" Grid.ColumnSpan="2"/>
+                    <DatePicker x:Name="dtAdmissionPatientPrep" HorizontalAlignment="Left" Margin="155.2,135,0,0" VerticalAlignment="Top" Grid.Column="2" Grid.ColumnSpan="2"/>
+                    <Label Content="Date Congé" HorizontalAlignment="Left" Margin="213.4,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.655,-0.109" Grid.Column="3"/>
+                    <DatePicker x:Name="dtCongePatientPrep" HorizontalAlignment="Left" Margin="213.4,135,0,0" VerticalAlignment="Top" Grid.Column="3" IsEnabled="False"/>
+                    <CheckBox x:Name="checkTelevision" Content="Télévision" HorizontalAlignment="Left" Margin="7.4,521,0,0" VerticalAlignment="Top" Grid.Column="3"/>
+                    <CheckBox x:Name="checkTelephone" Content="Téléphone" HorizontalAlignment="Left" Margin="100.4,521,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.419,0.191" Grid.Column="3"/>
+                    <GroupBox Header="Commodités" HorizontalAlignment="Left" Height="57" Margin="126.2,497,0,0" VerticalAlignment="Top" Width="412" Grid.Column="2" FontWeight="Bold" Grid.ColumnSpan="2"/>
+                    <GroupBox Header="Médecin" HorizontalAlignment="Left" Height="90" Margin="126.2,402,0,0" VerticalAlignment="Top" Width="412" Grid.Column="2" FontWeight="Bold" Grid.ColumnSpan="2"/>
+                    <GroupBox Header="Lits" HorizontalAlignment="Left" Height="133" Margin="126.2,264,0,0" VerticalAlignment="Top" Width="412" Grid.Column="2" FontWeight="Bold" Grid.ColumnSpan="2"/>
+                    <GroupBox Header="Chirurgie" HorizontalAlignment="Left" Height="70" Margin="126.2,189,0,0" VerticalAlignment="Top" Width="412" RenderTransformOrigin="0.5,0.5" Grid.Column="2" FontWeight="Bold" Grid.ColumnSpan="2"/>
+                    <GroupBox Header="Durée Séjour" HorizontalAlignment="Left" Height="94" Margin="126.2,90,0,0" VerticalAlignment="Top" Width="412" Grid.Column="2" FontWeight="Bold" Grid.ColumnSpan="2"/>
+
+
+                </Grid>
+
+            </TabItem>
+        </TabControl>
+        <Image HorizontalAlignment="Left" Height="65" Margin="481.156,27,-0.156,0" VerticalAlignment="Top" Width="99" RenderTransformOrigin="0.48,0.152" Source="Images/symbole-hopital.png" Grid.Column="5"/>
+        <Image HorizontalAlignment="Left" Height="65" Margin="0,27,0,0" VerticalAlignment="Top" Width="99" RenderTransformOrigin="0.48,0.152" Source="Images/symbole-hopital.png" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NorthernLightsHospitalModelStoreContainer" CdmEntityContainer="NorthernLightsHospitalEntities">
+    <EntitySetMapping Name="Compagnie_Assurance">
+      <EntityTypeMapping TypeName="NorthernLightsHospitalModel.Compagnie_Assurance">
+        <MappingFragment StoreEntitySet="Compagnie_Assurance">
+          <ScalarProperty Name="idCompagnie" ColumnName="idCompagnie" />
+          <ScalarProperty Name="nomCompagnie" ColumnName="nomCompagnie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departements">
+      <EntityTypeMapping TypeName="NorthernLightsHospitalModel.Departement">
+        <MappingFragment StoreEntitySet="Departement">
+          <ScalarProperty Name="idDepartement" ColumnName="idDepartement" />
+          <ScalarProperty Name="nomDepartement" ColumnName="nomDepartement" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dossier_Admission">
+      <EntityTypeMapping TypeName="NorthernLightsHospitalModel.Dossier_Admission">
+        <MappingFragment StoreEntitySet="Dossier_Admission">
+          <ScalarProperty Name="idDossier" ColumnName="idDossier" />
+          <ScalarProperty Name="chirurgieProgrammee" ColumnName="chirurgieProgrammee" />
+          <ScalarProperty Name="dateChirurgie" ColumnName="dateChirurgie" />
+          <ScalarProperty Name="dateConge" ColumnName="dateConge" />
+          <ScalarProperty Name="nasPatient" ColumnName="nasPatient" />
+          <ScalarProperty Name="noLit" ColumnName="noLit" />
+          <ScalarProperty Name="idMedecin" ColumnName="idMedecin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lits">
+      <EntityTypeMapping TypeName="NorthernLightsHospitalModel.Lit">
+        <MappingFragment StoreEntitySet="Lit">
+          <ScalarProperty Name="noLit" ColumnName="noLit" />
+          <ScalarProperty Name="occupe" ColumnName="occupe" />
+          <ScalarProperty Name="noTypeLit" ColumnName="noTypeLit" />
+          <ScalarProperty Name="idDepartement" ColumnName="idDepartement" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medecins">
+      <EntityTypeMapping TypeName="NorthernLightsHospitalModel.Medecin">
+        <MappingFragment StoreEntitySet="Medecin">
+          <ScalarProperty Name="idMedecin" ColumnName="idMedecin" />
+          <ScalarProperty Name="nomMedecin" ColumnName="nomMedecin" />
+          <ScalarProperty Name="prenomMedecin" ColumnName="prenomMedecin" />
+          <ScalarProperty Name="specialiteMedecin" ColumnName="specialiteMedecin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parents">
+      <EntityTypeMapping TypeName="NorthernLightsHospitalModel.Parent">
+        <MappingFragment StoreEntitySet="Parent">
+          <ScalarProperty Name="idParent" ColumnName="idParent" />
+          <ScalarProperty Name="nomParent" ColumnName="nomParent" />
+          <ScalarProperty Name="prenomParent" ColumnName="prenomParent" />
+          <ScalarProperty Name="adresseParent" ColumnName="adresseParent" />
+          <ScalarProperty Name="villeParent" ColumnName="villeParent" />
+          <ScalarProperty Name="provinceParent" ColumnName="provinceParent" />
+          <ScalarProperty Name="cpParent" ColumnName="cpParent" />
+          <ScalarProperty Name="noTelParent" ColumnName="noTelParent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patients">
+      <EntityTypeMapping TypeName="NorthernLightsHospitalModel.Patient">
+        <MappingFragment StoreEntitySet="Patient">
+          <ScalarProperty Name="idPatient" ColumnName="idPatient" />
+          <ScalarProperty Name="dateNaissancePatient" ColumnName="dateNaissancePatient" />
+          <ScalarProperty Name="nomPatient" ColumnName="nomPatient" />
+          <ScalarProperty Name="prenomPatient" ColumnName="prenomPatient" />
+          <ScalarProperty Name="adressePatient" ColumnName="adressePatient" />
+          <ScalarProperty Name="villePatient" ColumnName="villePatient" />
+          <ScalarProperty Name="provincePatient" ColumnName="provincePatient" />
+          <ScalarProperty Name="cpPatient" ColumnName="cpPatient" />
+          <ScalarProperty Name="noTelPatient" ColumnName="noTelPatient" />
+          <ScalarProperty Name="idCompagnie" ColumnName="idCompagnie" />
+          <ScalarProperty Name="refParent" ColumnName="refParent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Type_Lit">
+      <EntityTypeMapping TypeName="NorthernLightsHospitalModel.Type_Lit">
+        <MappingFragment StoreEntitySet="Type_Lit">
+          <ScalarProperty Name="idTypeLit" ColumnName="idTypeLit" />
+          <ScalarProperty Name="descTypeLit" ColumnName="descTypeLit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

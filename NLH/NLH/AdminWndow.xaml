@@ -1,0 +1,133 @@
+﻿<Window x:Class="NLH.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NLH"
+        mc:Ignorable="d"
+        Title="AdminWndow" Height="450" Width="942.8" Loaded="Window_Loaded">
+    <Grid Margin="0,-14,-0.2,0.2">
+        <TabControl HorizontalAlignment="Left" Height="424" Margin="0,10,-99.8,-0.2" VerticalAlignment="Top" Width="1036">
+            <TabItem Header="Lits" Margin="-2,0,-34.2,0">
+                <Grid Background="#FFE5E5E5" Margin="0,0,-7.8,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="37*"/>
+                        <ColumnDefinition Width="201*"/>
+                        <ColumnDefinition Width="681*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="dgPatientsPresents" HorizontalAlignment="Left" Height="185" Margin="10,135,0,0" VerticalAlignment="Top" Width="563" AutoGenerateColumns="False" Grid.ColumnSpan="3">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Lit" IsReadOnly="True" Binding="{Binding noLit}"/>
+                            <DataGridTextColumn Header="Type" IsReadOnly="True" Binding="{Binding Lit.Type_Lit.descTypeLit}"/>
+                            <DataGridTextColumn Header="Département" IsReadOnly="True" Binding="{Binding Lit.Departement.nomDepartement}"/>
+                            <DataGridTextColumn Header="NAS" IsReadOnly="True" Binding="{Binding nasPatient}"/>
+                            <DataGridTextColumn Header="Nom Patient">
+                                <DataGridTextColumn.Binding>
+                                    <MultiBinding StringFormat="{}{0} {1}">
+                                        <Binding Path="Patient.prenomPatient" />
+                                        <Binding Path="Patient.nomPatient"/>
+                                    </MultiBinding>
+                                </DataGridTextColumn.Binding>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Date Admission" IsReadOnly="True" Binding="{Binding dateAdmission,  StringFormat=\{0:dd-MM-yyyy\}}"/>
+                            <DataGridTextColumn Header="Médecin">
+                                <DataGridTextColumn.Binding>
+                                    <MultiBinding StringFormat="{}{0} {1}">
+                                        <Binding Path="Medecin.prenomMedecin"/>
+                                        <Binding Path="Medecin.nomMedecin"/>
+                                    </MultiBinding>
+                                </DataGridTextColumn.Binding>
+                            </DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Rectangle Grid.Column="2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="158" Margin="362.6,135,0,0" Stroke="Black" VerticalAlignment="Top" Width="277"/>
+                    <Label x:Name="lblUSt" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Margin="458.6,187,0,0"/>
+                    <Label x:Name="lblPSt" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Margin="458.6,224,0,0" RenderTransformOrigin="0.208,2.578"/>
+                    <Label x:Name="lblCSt"  HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Margin="458.6,258,0,0" RenderTransformOrigin="0.208,2.578"/>
+                    <Label x:Name="lblUSp"  HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Margin="524.6,187,0,0"/>
+                    <Label x:Name="lblPSp"  HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Margin="524.6,224,0,0"/>
+                    <Label x:Name="lblCSp" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Margin="524.6,258,0,0" RenderTransformOrigin="0.486,1.547"/>
+                    <Label x:Name="lblUPr" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Margin="590.6,187,0,0" RenderTransformOrigin="2.486,-0.047"/>
+                    <Label x:Name="lblPPr" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Margin="590.6,224,0,0" RenderTransformOrigin="2.486,-0.047"/>
+                    <Label x:Name="lblCPr"  HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Margin="590.6,258,0,0" RenderTransformOrigin="2.486,-0.047"/>
+                    <Rectangle Fill="#FF2424F1" HorizontalAlignment="Left" Height="72" Stroke="Black" VerticalAlignment="Top" Width="1038" Grid.ColumnSpan="3"/>
+                    <Label Content="État des Lits dans l'Hôpital" HorizontalAlignment="Left" Margin="50.6,10,0,0" VerticalAlignment="Top" FontSize="28" Foreground="White" Grid.Column="2"/>
+                    <Label Content="Lits occupés" HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Grid.ColumnSpan="2"/>
+                    <Label Content="Lits disponibles" HorizontalAlignment="Left" Margin="369.2,97,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="2" FontSize="14" RenderTransformOrigin="0.453,1.681"/>
+                    <Label x:Name="lblNbrLibres" Foreground="#FF2424F1"  Grid.Column="2" HorizontalAlignment="Left" Margin="356.6,315,0,0" VerticalAlignment="Top" Height="26" Width="308" FontWeight="Bold"/>
+                    <Rectangle Grid.Column="2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="27" Margin="362.6,135,0,0" Stroke="Black" VerticalAlignment="Top" Width="277"/>
+                    <Label Content="Semi-Privé" Grid.Column="2" HorizontalAlignment="Left" Margin="502.6,161,0,0" VerticalAlignment="Top" Width="70"/>
+                    <Label Content="Standard" Grid.Column="2" HorizontalAlignment="Left" Margin="439.6,161,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Privé" Grid.Column="2" HorizontalAlignment="Left" Margin="577.6,161,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.281,0.465" Width="48"/>
+                    <Rectangle Grid.Column="2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="131" Margin="362.6,162,0,0" Stroke="Black" VerticalAlignment="Top" Width="72"/>
+                    <Label Content="Urgence" Grid.Column="2" HorizontalAlignment="Left" Margin="369.6,187,0,0" VerticalAlignment="Top" Width="63"/>
+                    <Label Content="Pédiatrie" Grid.Column="2" HorizontalAlignment="Left" Margin="369.6,224,0,0" VerticalAlignment="Top" Width="59"/>
+                    <Label Content="Chirurgie" Grid.Column="2" HorizontalAlignment="Left" Margin="369.6,258,0,0" VerticalAlignment="Top"/>
+                    <Button Content="Quitter" Grid.Column="2" HorizontalAlignment="Left" Margin="165.2,347,0,0" VerticalAlignment="Top" Width="100" Height="39" Background="#FFF10F0F" Click="Button_Click"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Médecins" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="89" Margin="35,0,-35.2,-3">
+                <Grid Background="#FFE5E5E5" Margin="0,0,-3.8,-4" Height="400" VerticalAlignment="Top">
+                    <ComboBox x:Name="cbMedecins" HorizontalAlignment="Left" Margin="57,132,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True" SelectionChanged="cbMedecins_SelectionChanged">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <TextBlock.Text>
+                                        <MultiBinding StringFormat="{}{0} {1}">
+                                            <Binding Path="prenomMedecin"/>
+                                            <Binding Path="nomMedecin"/>
+                                        </MultiBinding>
+                                    </TextBlock.Text>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Button x:Name="btnAssignerMedecin" Content="Assigner" Background="#FF41FF00" HorizontalAlignment="Left" Margin="667,298,0,0" VerticalAlignment="Top" Width="57" RenderTransformOrigin="0.704,0.104" Height="23" Click="btnAssignerMedecin_Click"/>
+                    <DataGrid x:Name="dgDossiersMedecin" HorizontalAlignment="Left" Height="173" Margin="224,132,0,0" VerticalAlignment="Top" Width="402" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="NAS" IsReadOnly="True" Binding="{Binding Patient.idPatient}"/>
+                            <DataGridTextColumn Header="Prénom" IsReadOnly="True" Binding="{Binding Patient.prenomPatient}"/>
+                            <DataGridTextColumn Header="Nom" IsReadOnly="True" Binding="{Binding Patient.nomPatient}"/>
+                            <DataGridTextColumn Header="Date Admission" IsReadOnly="True" Binding="{Binding dateAdmission,  StringFormat=\{0:yyyy-MM-dd\}}"/>
+                            <DataGridTextColumn Header="Lit" IsReadOnly="True" Binding="{Binding noLit}"/>
+                            <DataGridTextColumn Header="Département" IsReadOnly="True" Binding="{Binding Lit.Departement.nomDepartement}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <ComboBox x:Name="cbDepartementsChanger" HorizontalAlignment="Left" Margin="58,267,0,0" VerticalAlignment="Top" Width="120"  DisplayMemberPath="nomDepartement" IsSynchronizedWithCurrentItem="True"/>
+                    <TextBox x:Name="txtSpecialite" HorizontalAlignment="Left" Height="23" Margin="57,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+                    <Button x:Name="btnChangerDpt" Content="Changer" Background="#FF41FF00" HorizontalAlignment="Left" Margin="58,296,0,0" VerticalAlignment="Top" Width="63" Click="btnChangerDpt_Click" RenderTransformOrigin="0.748,0.208"/>
+                    <ComboBox x:Name="cbAutresMedecins" HorizontalAlignment="Left" Margin="667,267,0,0" VerticalAlignment="Top" Width="143" RenderTransformOrigin="0.501,1.036" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <TextBlock.Text>
+                                        <MultiBinding StringFormat="{}{0} {1}">
+                                            <Binding Path="prenomMedecin"/>
+                                            <Binding Path="nomMedecin"/>
+                                        </MultiBinding>
+                                    </TextBlock.Text>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Label Content="Assigner patient sélectionné au docteur:" HorizontalAlignment="Left" Margin="660,241,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="38"/>
+                    <Button x:Name="btnRetirerMedecin" Content="Retirer Médecin" HorizontalAlignment="Left" Margin="372,332,0,0" VerticalAlignment="Top" Width="104" Height="32" RenderTransformOrigin="0.467,1.445" Background="#FF121111" Foreground="White" Click="btnRetirerMedecin_Click"/>
+                    <Button Content="Quitter" HorizontalAlignment="Left" Margin="494,332,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.707,1.175" Height="32" Background="#FFF10F0F" Click="Button_Click"/>
+                    <Label x:Name="lblGrid" Content="Patients présentement sous charge" HorizontalAlignment="Left" Margin="224,101,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="0.555,1.27"/>
+                    <Label Content="Médecin" HorizontalAlignment="Left" Margin="52,101,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Content="Département" HorizontalAlignment="Left" Margin="57,241,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="0.475,1.691"/>
+                    <Label Content="Spécialité" HorizontalAlignment="Left" Margin="57,172,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Rectangle Fill="#FF2424F1" HorizontalAlignment="Left" Height="72" Stroke="Black" VerticalAlignment="Top" Width="1034"/>
+                    <Label Content="Administrer les Médecins et leurs Patients" HorizontalAlignment="Left" Margin="183,10,0,0" VerticalAlignment="Top" FontSize="28" Foreground="White"/>
+                    <CheckBox x:Name="cbSansMedecin" Content="Afficher patients sans médecin assigné" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="660,142,0,0" Height="38" Width="195" Checked="cbSansMedecin_Checked" Unchecked="cbSansMedecin_Unchecked" FontWeight="Bold" FontStyle="Italic"/>
+                    <Button Content="Nouveau Médecin" Background="#FF41FF00" HorizontalAlignment="Left" VerticalAlignment="Top" Width="103" Margin="249,332,0,0" Height="32" Click="Button_Click_1"/>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Image HorizontalAlignment="Left" Height="65" Margin="837,37,0,0" VerticalAlignment="Top" Width="99" RenderTransformOrigin="0.48,0.152" Source="Images/symbole-hopital.png"/>
+        <Image HorizontalAlignment="Left" Height="65" Margin="0,37,0,0" VerticalAlignment="Top" Width="99" RenderTransformOrigin="0.48,0.152" Source="Images/symbole-hopital.png"/>
+
+    </Grid>
+</Window>
