@@ -27,3 +27,33 @@ C:\Users\girou\Dropbox\Collège Rosemont\4-Hiver 2020\C# Avancé\Examens et Trav
 C:\Users\girou\Dropbox\Collège Rosemont\4-Hiver 2020\C# Avancé\Examens et Travaux\TP Final\NLH\NLH\obj\Debug\PrepWindow.baml
 C:\Users\girou\Dropbox\Collège Rosemont\4-Hiver 2020\C# Avancé\Examens et Travaux\TP Final\NLH\NLH\obj\Debug\NouveauMed.g.cs
 C:\Users\girou\Dropbox\Collège Rosemont\4-Hiver 2020\C# Avancé\Examens et Travaux\TP Final\NLH\NLH\obj\Debug\NouveauMed.baml
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\bin\Debug\NLH.exe.config
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\bin\Debug\NLH.exe
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\bin\Debug\NLH.pdb
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\bin\Debug\EntityFramework.dll
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\bin\Debug\EntityFramework.SqlServer.dll
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\bin\Debug\EntityFramework.xml
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\bin\Debug\EntityFramework.SqlServer.xml
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\bin\Debug\fr\EntityFramework.resources.dll
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\NLH.csprojAssemblyReference.cache
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\AdminWndow.g.cs
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\DocWindow.g.cs
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\MainWindow.g.cs
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\NouveauMed.g.cs
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\PrepWindow.g.cs
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\App.g.cs
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\NLH_Content.g.cs
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\NLH_MarkupCompile.cache
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\NLH_MarkupCompile.lref
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\AdminWndow.baml
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\DocWindow.baml
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\MainWindow.baml
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\NouveauMed.baml
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\PrepWindow.baml
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\NLH.g.resources
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\NLH.Properties.Resources.resources
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\NLH.csproj.GenerateResource.cache
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\NLH.csproj.CoreCompileInputs.cache
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\NLH.csproj.CopyComplete
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\NLH.exe
+D:\Hopital\Gestion-Hopital-.NET-Entity-Framewok\NLH\NLH\obj\Debug\NLH.pdb
